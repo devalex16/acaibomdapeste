@@ -24,6 +24,7 @@ body {
   width: 100vw;
   background-color: var(--purple-200);
   position: relative;
+  overflow-x: hidden;
 }
 
 /*CONFIG GERAIS*/

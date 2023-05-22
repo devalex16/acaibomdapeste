@@ -1,0 +1,376 @@
+:root {
+  --purple-700: #311838;
+  --purple-600: #3B1743;
+  --purple-200: #F9F2FC;
+  --font-alk:'Alkatra', cursive;
+  --font-xlg: 4em;
+  --font-lg: 3em;
+  --font-nm: 2.4em;
+  --font-sm: 1.7em;
+  --font-xsm: 1.4em;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--purple-200);
+  position: relative;
+}
+
+/*CONFIG GERAIS*/
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.shadow-img {
+  filter: drop-shadow(0px 0px 20px rgba(0,0,0, 0.65));
+  z-index: -1;
+}
+
+.transparent-bg {
+  background: rgba(49, 24, 57, .40);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+}
+
+.font-lg {
+  font-size: var(--font-lg);
+  line-height: 1em;
+}
+
+.font-xlg {
+  font-size: var(--font-xlg);
+}
+
+.font-nm {
+  font-size: var(--font-nm);
+  font-weight: 600;
+}
+
+.font-sm {
+  font-size: var(--font-sm);
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+.font-xsm {
+  font-size: var(--font-xsm);
+  font-weight: 600;
+}
+
+/*CABEÇALHO*/
+header {
+  width: 100vw;
+  padding: 1em;
+  position: fixed;
+}
+
+header > img {
+  width: 8em;
+}
+
+/*CONTEÚDO*/
+.content {
+  max-width: 900px;
+  font-family: var(--font-alk);
+  color: var(--purple-700);
+  padding-top: 10em;
+  margin: auto;
+}
+
+/*BANNERS*/
+.legend > h2{
+  margin-bottom: 150px;
+}
+
+.build {
+  margin: 4.5em 0em;
+}
+
+.build > h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*MENU*/
+.menu-bg {
+  width: 100%;
+  height: 100%;
+  background: url("../assets/5.jpeg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.menu {
+  width: 100%;
+  background: 
+  rgba(49, 24, 57, .8);
+  color: var(--purple-200);
+  padding: 50px;
+}
+
+.menu > h4 {
+  margin: 20px 0px;
+}
+/*CARDAPIO - PREÇOS */
+
+.prices {
+  width: 100%;
+  gap: 2em;
+  margin: 30px 0px;
+  text-align: center;
+}
+
+.circle {
+  background: var(--purple-200);
+  color: var(--purple-600);
+  border-radius: 100%;
+  padding: 20px 34px;
+}
+
+/*CARPAPIO - TRADICIONAL*/
+.adds {
+  width: 50%;
+  text-align: left;
+  border-right: 2px solid white;
+}
+
+.more {
+  width: 50%;
+  text-align: left;
+  margin-bottom: 14%;
+  padding-left: 60px;
+}
+
+/*CARDAPIO - GOURMET*/
+.gourmet {
+  text-align: left;
+  gap: 1em;
+}
+
+.prices-g {
+  gap: 2em;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.prices-g > span {
+  padding: 25px 15px;
+}
+
+/*Quem Somos*/
+.we {
+  margin: 40px 0px;
+}
+
+/*LOCATION*/
+.location {
+  width: 100%;
+}
+
+
+.min-map {
+  width: 100%;
+}
+
+/*CONTATOS*/
+.contact {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  margin: 30px;
+  background: var(--purple-700);
+  color: var(--purple-200);
+}
+
+.order {
+  color: var(--purple-700);
+  background: var(--purple-200);
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 1em 0em;
+}
+
+.contact > span {
+  margin-top: 20px;
+}
+
+.float {
+  background: #43FF91;
+  color: #000000;
+  font-size: 8em;
+  border-radius: 100%;
+  padding: .1em;
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  box-shadow: 0px 0px 20px #0DD971;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 70px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+footer {
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+/*CONFIGS - MOBILE*/
+@media screen and (max-width: 900px) {
+  .font-xlg {
+    font-size: 2.3em;
+  }
+  
+  .font-lg {
+    font-size: 1.8em;
+  }
+  
+  .font-nm {
+    font-size: 1.6em;
+  }
+  
+  .font-sm {
+    font-size: .9em;
+  }
+   
+  .font-xsm {
+    font-size: .5em;
+  }
+   
+  .min-logo {
+    max-width: 60px;
+  }
+   
+  .min-img {
+    max-width: 200px;
+  }
+   
+  .min-pd {
+    padding: 1em;
+  }
+   
+  header {
+    height: 4em;
+  }
+   
+  .content {
+    padding-top: 5em;
+  }
+   
+  .legend > h2 {
+    margin-bottom: 50px;
+  }
+  
+  .build > h2 {
+    margin-bottom: -6px;
+  }
+   
+  .prices {
+    gap: 1em;
+    margin: 20px 0px;
+  }
+   
+  .prices-g {
+    gap: 4em;
+  }
+   
+  .prices-g > span {
+    padding: 20px 15px;
+  }
+  
+  .circle {
+    padding: 8px 15px;
+  }
+   
+  .adds {
+    padding-right: 20px;
+  }
+   
+  .more {
+    padding-left: 20px;
+  }
+   
+  .location {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
+   
+  .location > span > p {
+    font-size: 1.2em;
+  }
+   
+  .contact > p{
+    font-size: 1.2em;
+  }
+   
+  .zap {
+    padding: 15px 0px;
+  }
+   
+  .min-map {
+    width: 100%;
+  }
+   
+  .float {
+    font-size: 3.5em;
+    right: 20px;
+    bottom: 30px;
+  }
+  
+  @keyframes floating {
+    0% {
+      bottom: 30px;
+    }
+    50% {
+      bottom: 40px;
+    }
+    100% {
+      bottom: 30px;
+    }
+  }
+
+}

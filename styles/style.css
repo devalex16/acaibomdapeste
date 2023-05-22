@@ -309,7 +309,7 @@ footer {
   }
    
   .prices {
-    gap: 1em;
+    gap: .5em;
     margin: 20px 0px;
   }
    
